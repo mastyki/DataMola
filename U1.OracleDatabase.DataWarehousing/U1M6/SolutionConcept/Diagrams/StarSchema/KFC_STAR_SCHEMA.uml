@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_COUPONS_SCD</OriginalElement>
+  <nodes>
+    <node x="1151.0" y="-94.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_RESTAURANTS</node>
+    <node x="47.0" y="-589.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_TIME</node>
+    <node x="918.0" y="-204.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_GEO_LOCATIONS</node>
+    <node x="444.0" y="648.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD</node>
+    <node x="303.99999999999994" y="-193.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_PRODUCTS</node>
+    <node x="595.0" y="-116.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_COUPONS_SCD</node>
+    <node x="-152.0" y="-94.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_PERIODS</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD" target="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_RESTAURANTS" relationship="REFERENCES">
+      <point x="124.16666666666663" y="-126.5" />
+      <point x="717.1666666666665" y="628.0" />
+      <point x="1249.0" y="628.0" />
+      <point x="0.0" y="93.5" />
+    </edge>
+    <edge source="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD" target="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_PRODUCTS" relationship="REFERENCES">
+      <point x="-24.83333333333337" y="-126.5" />
+      <point x="568.1666666666665" y="608.0" />
+      <point x="439.5" y="608.0" />
+      <point x="0.0" y="192.5" />
+    </edge>
+    <edge source="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD" target="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_COUPONS_SCD" relationship="REFERENCES">
+      <point x="24.83333333333337" y="-126.5" />
+      <point x="617.8333333333333" y="608.0" />
+      <point x="746.5" y="608.0" />
+      <point x="0.0" y="115.5" />
+    </edge>
+    <edge source="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD" target="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_GEO_LOCATIONS" relationship="REFERENCES">
+      <point x="74.5" y="-126.5" />
+      <point x="667.5" y="618.0" />
+      <point x="1024.5" y="618.0" />
+      <point x="0.0" y="203.5" />
+    </edge>
+    <edge source="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD" target="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_TIME" relationship="REFERENCES">
+      <point x="-74.5" y="-126.5" />
+      <point x="518.5" y="618.0" />
+      <point x="165.5" y="618.0" />
+      <point x="0.0" y="588.5" />
+    </edge>
+    <edge source="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD" target="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_PERIODS" relationship="REFERENCES">
+      <point x="-124.16666666666663" y="-126.5" />
+      <point x="468.83333333333326" y="628.0" />
+      <point x="-62.5" y="628.0" />
+      <point x="0.0" y="93.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.6808774834437088" showDependencies="false" x="1056.5161702127652" y="216.62370820668673" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
