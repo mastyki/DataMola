@@ -3,54 +3,54 @@
   <ID>DATABASE</ID>
   <OriginalElement>e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_COUPONS_SCD</OriginalElement>
   <nodes>
-    <node x="450.5" y="648.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD</node>
-    <node x="396.0" y="-94.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_RESTAURANTS</node>
-    <node x="818.0" y="-204.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_GEO</node>
-    <node x="1038.0" y="-116.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_COUPONS_SCD</node>
-    <node x="139.00000000000006" y="-589.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_TIME</node>
-    <node x="-152.0" y="-193.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_PRODUCTS</node>
-    <node x="612.0" y="-105.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_PERIODS</node>
+    <node x="682.0" y="-94.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_RESTAURANTS</node>
+    <node x="1155.0" y="-105.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_PERIODS</node>
+    <node x="898.0" y="-589.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_TIME</node>
+    <node x="-152.0" y="-204.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_GEO</node>
+    <node x="504.25" y="648.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD</node>
+    <node x="391.0" y="-193.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_PRODUCTS</node>
+    <node x="68.0" y="-127.0">e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_COUPONS_SCD</node>
   </nodes>
   <notes />
   <edges>
     <edge source="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD" target="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_RESTAURANTS" relationship="REFERENCES">
-      <point x="-24.833333333333314" y="-126.5" />
-      <point x="574.6666666666667" y="608.0" />
-      <point x="494.0" y="608.0" />
+      <point x="24.833333333333343" y="-126.5" />
+      <point x="678.0833333333334" y="608.0" />
+      <point x="780.0" y="608.0" />
       <point x="0.0" y="93.5" />
     </edge>
     <edge source="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD" target="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_PRODUCTS" relationship="REFERENCES">
-      <point x="-124.16666666666663" y="-126.5" />
-      <point x="475.33333333333337" y="628.0" />
-      <point x="-16.5" y="628.0" />
+      <point x="-24.833333333333314" y="-126.5" />
+      <point x="628.4166666666667" y="608.0" />
+      <point x="526.5" y="608.0" />
       <point x="0.0" y="192.5" />
     </edge>
     <edge source="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD" target="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_COUPONS_SCD" relationship="REFERENCES">
-      <point x="124.16666666666666" y="-126.5" />
-      <point x="723.6666666666666" y="628.0" />
-      <point x="1189.5" y="628.0" />
-      <point x="0.0" y="115.5" />
+      <point x="-74.49999999999997" y="-126.5" />
+      <point x="578.75" y="618.0" />
+      <point x="219.5" y="618.0" />
+      <point x="0.0" y="126.5" />
     </edge>
     <edge source="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD" target="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_GEO" relationship="REFERENCES">
-      <point x="74.5" y="-126.5" />
-      <point x="674.0" y="618.0" />
-      <point x="918.0" y="618.0" />
+      <point x="-124.16666666666663" y="-126.5" />
+      <point x="529.0833333333334" y="628.0" />
+      <point x="-52.0" y="628.0" />
       <point x="0.0" y="203.5" />
     </edge>
     <edge source="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD" target="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_TIME" relationship="REFERENCES">
-      <point x="-74.49999999999997" y="-126.5" />
-      <point x="525.0" y="618.0" />
-      <point x="257.50000000000006" y="618.0" />
+      <point x="74.5" y="-126.5" />
+      <point x="727.75" y="618.0" />
+      <point x="1016.5" y="618.0" />
       <point x="0.0" y="588.5" />
     </edge>
     <edge source="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_FCT_SALES_DD" target="e705b2cb-b802-413d-ab31-e9efa2caeb82.TABLE:EMASTYKINA.ST_DIM_PERIODS" relationship="REFERENCES">
-      <point x="24.833333333333343" y="-126.5" />
-      <point x="624.3333333333334" y="608.0" />
-      <point x="705.0" y="608.0" />
+      <point x="124.16666666666666" y="-126.5" />
+      <point x="777.4166666666666" y="628.0" />
+      <point x="1248.0" y="628.0" />
       <point x="0.0" y="104.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="0.32317880794701986" showDependencies="false" x="594.5" y="156.0" />
+  <settings layout="Hierarchic" zoom="0.6400000000000001" showDependencies="false" x="117.71874999999989" y="-21.21923828125017" />
   <SelectedNodes />
   <Categories>
     <Category>Columns</Category>
