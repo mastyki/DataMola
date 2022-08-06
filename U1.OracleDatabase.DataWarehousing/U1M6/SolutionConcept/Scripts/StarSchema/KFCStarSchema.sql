@@ -44,6 +44,7 @@ CREATE TABLE ST_DIM_RESTAURANTS (
 CREATE TABLE ST_DIM_COUPONS_SCD (
     coupon_id NUMBER(*, 0) NOT NULL,
     coupon_desc VARCHAR2(40),
+    media_type_id NUMBER (*, 0) NOT NULL,
     media_type VARCHAR2(40),
     discount_percentage_amount NUMBER(4,2),
     valid_from DATE DEFAULT TO_DATE('01/01/1990', 'DD/MM/YYYY') NOT NULL ,
