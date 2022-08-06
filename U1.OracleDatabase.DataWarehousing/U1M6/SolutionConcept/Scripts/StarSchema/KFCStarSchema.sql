@@ -58,7 +58,7 @@ CREATE TABLE ST_DIM_COUPONS_SCD (
 /* Table: DIM_GEO_LOCATIONS                                               */
 /*==============================================================*/
 
-create table ST_DIM_GEO_LOCATIONS (
+CREATE TABLE ST_DIM_GEO (
    GEO_ID               NUMBER(22) NOT NULL,
    COUNTRY_ID           NUMBER(22,0) NOT NULL,
    COUNTRY_NAME         CHAR(20) NOT NULL,
@@ -76,14 +76,14 @@ create table ST_DIM_GEO_LOCATIONS (
    CITY_DESC            VARCHAR2(150) NOT NULL,
    INSERT_DT            DATE NOT NULL,
    UPDATE_DT            DATE NOT NULL,
-   constraint PK_GEO primary key (GEO_ID) ENABLE
+   CONSTRAINT PK_GEO PRIMARY KEY (GEO_ID) ENABLE
 );
 
 /*==============================================================*/
 /* Table: DIM_TIME                                              */
 /*==============================================================*/
 
-create table ST_DIM_TIME (
+CREATE TABLE ST_DIM_TIME (
    TIME_ID              DATE NOT NULL,
    DAY_NAME             VARCHAR(40),
    DAY_NUM_WEEK_ISO     NUMBER(1),
@@ -136,7 +136,7 @@ create table ST_DIM_TIME (
    YEAR_DAYS_CNT_FIN    NUMBER(3),
    YEAR_BEGIN_DT_FIN    DATE,
    YEAR_END_DT_FIN      DATE,
-   constraint PK_TIME primary key (TIME_ID) ENABLE
+   CONSTRAINT PK_TIME PRIMARY KEY (TIME_ID) ENABLE
 );
 
 /*==============================================================*/
@@ -145,6 +145,7 @@ create table ST_DIM_TIME (
 
 CREATE TABLE ST_DIM_PERIODS (
     PERIOD_ID NUMBER NOT NULL,
+    PERIOD_NAME VARCHAR2(40),
     PERIOD_DESC VARCHAR2(40),
     BEGIN_DT DATE DEFAULT TO_DATE('01/01/1990', 'DD/MM/YYYY') NOT NULL ,
     END_DT DATE DEFAULT TO_DATE('31/12/9999', 'DD/MM/YYYY') NOT NULL,
@@ -158,7 +159,7 @@ CREATE TABLE ST_DIM_PERIODS (
 /* Table: ST_FCT_SALES_DD                                       */
 /*==============================================================*/
 
-DROP TABLE ST_FCT_SALES_DD
+
 CREATE TABLE  ST_FCT_SALES_DD (
     SALE_ID NUMBER NOT NULL,
     TIME_ID DATE NOT NULL,
@@ -176,7 +177,7 @@ CREATE TABLE  ST_FCT_SALES_DD (
     CONSTRAINT FK_SALES_RESTAURANTS FOREIGN KEY (RESTAURANT_ID) REFERENCES ST_DIM_RESTAURANTS (RESTAURANT_ID),
     CONSTRAINT FK_SALES_COUPONS FOREIGN KEY (COUPON_ID) REFERENCES ST_DIM_COUPONS_SCD (COUPON_ID),
     CONSTRAINT FK_SALES_PRODUCTS FOREIGN KEY (PRODUCT_ID) REFERENCES ST_DIM_PRODUCTS (PRODUCT_ID),
-    CONSTRAINT FK_SALES_GEO_LOCATIONS FOREIGN KEY (GEO_ID) REFERENCES ST_DIM_GEO_LOCATIONS (GEO_ID)
+    CONSTRAINT FK_SALES_GEO FOREIGN KEY (GEO_ID) REFERENCES ST_DIM_GEO (GEO_ID)
 )
 PARTITION BY RANGE (TIME_ID) INTERVAL (NUMTOYMINTERVAL(1,'MONTH'))
 SUBPARTITION BY HASH (RESTAURANT_ID) SUBPARTITIONS 4
