@@ -2,18 +2,19 @@
 /* Table: SA_PRODUCTS                                           */
 /*==============================================================*/
 CREATE TABLE SA_PRODUCTS_DATA (
-    PRODUCT_NAME      VARCHAR2(40 BYTE) NOT NULL,
-    PRODUCT_DESC      VARCHAR2(40 BYTE),
-    CATEGORY_ID       NUMBER(*, 0),
-    CATEGORY_NAME     VARCHAR2(40 BYTE),
-    CATEGORY_DESC     VARCHAR2(40 BYTE),
-    SUBCATEGORY_ID    NUMBER(*, 0),
-    SUBCATEGORY_NAME  VARCHAR2(40 BYTE),
-    SUBCATEGORY_DESC  VARCHAR2(40 BYTE),
-    FEATURE_ID        NUMBER(*, 0),
-    FEATURE_NAME      VARCHAR2(40 BYTE),
-    FEATURE_DESC      VARCHAR2(40 BYTE),
-    INSERT_DT         DATE NOT NULL
+    PRODUCT_NAME        VARCHAR2(40 BYTE),
+    PRODUCT_DESC        VARCHAR2(40 BYTE),
+    CATEGORY_ID         NUMBER(*, 0),
+    CATEGORY_NAME       VARCHAR2(40 BYTE),
+    CATEGORY_DESC       VARCHAR2(40 BYTE),
+    SUBCATEGORY_ID      NUMBER(*, 0),
+    SUBCATEGORY_NAME    VARCHAR2(40 BYTE),
+    SUBCATEGORY_DESC    VARCHAR2(40 BYTE),
+    FEATURE_ID          NUMBER(*, 0),
+    FEATURE_NAME        VARCHAR2(40 BYTE),
+    FEATURE_DESC        VARCHAR2(40 BYTE),
+    COST_DOLLAR_AMOUNT  NUMBER (5,2),
+    INSERT_DT           DATE
 )
 TABLESPACE TS_SA_PRODUCTS_DATA_01;
 
@@ -22,10 +23,10 @@ TABLESPACE TS_SA_PRODUCTS_DATA_01;
 /*==============================================================*/
 
 CREATE TABLE SA_RESTAURANTS_DATA (
-    PHONE              VARCHAR2(40 BYTE) NOT NULL,
-    POSTAL_CODE        NUMBER(10,0) NOT NULL,
-    ADDRESS            VARCHAR2(40 BYTE) NOT NULL,
-    INSERT_DT          DATE NOT NULL
+    PHONE              VARCHAR2(40 BYTE),
+    POSTAL_CODE        NUMBER(10,0),
+    ADDRESS            VARCHAR2(40 BYTE),
+    INSERT_DT          DATE
 )
 TABLESPACE TS_SA_RESTAURANTS_DATA_01;
 
@@ -34,14 +35,14 @@ TABLESPACE TS_SA_RESTAURANTS_DATA_01;
 /*==============================================================*/
 
 CREATE TABLE SA_COUPONS_DATA (
-    COUPON_NAME                  VARCHAR2(40) NOT NULL,
+    COUPON_NAME                  VARCHAR2(40),
     COUPON_DESC                  VARCHAR2(40),
-    MEDIA_TYPE_ID                NUMBER(*,0) NOT NULL,
-    MEDIA_TYPE                   VARCHAR2(40) NOT NULL,
-    DISCOUNT_PERCENTAGE_AMOUNT   NUMBER(4,2) NOT NULL,
-    VALID_FROM                   DATE NOT NULL ,
-    VALID_TO                     DATE NOT NULL,
-    INSERT_DT                    DATE NOT NULL
+    MEDIA_TYPE_ID                NUMBER(*,0),
+    MEDIA_TYPE                   VARCHAR2(40),
+    DISCOUNT_PERCENTAGE_AMOUNT   NUMBER(4,2),
+    VALID_FROM                   DATE,
+    VALID_TO                     DATE,
+    INSERT_DT                    DATE
 )
 TABLESPACE TS_SA_COUPONS_DATA_01;
 

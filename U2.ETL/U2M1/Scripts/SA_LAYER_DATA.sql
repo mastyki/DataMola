@@ -1,5 +1,5 @@
 /*==============================================================*/
-/* Table: SA_DIM_PRODUCTS                               */
+/* Table: SA_DIM_PRODUCTS                                       */
 /*==============================================================*/
 CREATE SEQUENCE feature_seq START WITH 1;
 CREATE TABLE TMP_FEATURES(
