@@ -1,0 +1,6 @@
+ALTER SESSION  SET CURRENT_SCHEMA = DW_CL;
+
+CREATE OR REPLACE PACKAGE pkg_etl_sales_cl
+AS
+    PROCEDURE load_CLEAN_SALES;
+END pkg_etl_sales_cl;
