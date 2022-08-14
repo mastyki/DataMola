@@ -81,8 +81,10 @@ AS
        EXECUTE IMMEDIATE 'TRUNCATE TABLE DW_CL.CL_SALES';
        FOR i IN c_v LOOP
          IF current_date < i.end_dt THEN  active_status := 'Y';
+         ELSE active_status := 'N';
          END IF;
-          IF current_date < i.VALID_TO THEN coupon_active_status := 'Y';
+         IF current_date < i.VALID_TO THEN coupon_active_status := 'Y';
+         ELSE coupon_active_status := 'N';
          END IF;
          INSERT INTO DW_CL.CL_SALES(
                          product_name,
