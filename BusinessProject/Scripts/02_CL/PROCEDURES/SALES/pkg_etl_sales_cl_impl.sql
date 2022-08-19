@@ -8,6 +8,7 @@ AS
         CURSOR c_v
             IS
             SELECT DISTINCT sale_id,
+                            sale_dt,
                             product_name,
                             feature_name,
                             cost_dollar_amount,
@@ -20,12 +21,14 @@ AS
         FOR i IN c_v
             LOOP
                 IF (i.sale_id is NULL OR
+                    i.sale_dt is NULL OR
                     i.product_name is NULL OR
                     i.cost_dollar_amount is NULL OR
                     i.restaurant_code is NULL
                     )
                 THEN
                     INSERT INTO DW_CL.CL_SALES_BAD(sale_id,
+                                                   sale_dt,
                                                    product_name,
                                                    feature_name,
                                                    cost_dollar_amount,
@@ -33,6 +36,7 @@ AS
                                                    restaurant_code,
                                                    src_file_id)
                     VALUES (i.sale_id,
+                            i.sale_dt,
                             i.product_name,
                             i.feature_name,
                             i.cost_dollar_amount,
@@ -42,6 +46,7 @@ AS
                 ELSIF i.SRC_FILE_ID is NULL
                 THEN
                     INSERT INTO DW_CL.CL_SALES_BAD(sale_id,
+                                                   sale_dt,
                                                    product_name,
                                                    feature_name,
                                                    cost_dollar_amount,
@@ -49,6 +54,7 @@ AS
                                                    restaurant_code,
                                                    src_file_id)
                     VALUES (i.sale_id,
+                            i.sale_dt,
                             i.product_name,
                             i.feature_name,
                             i.cost_dollar_amount,
@@ -58,6 +64,7 @@ AS
                 ELSIF (i.cost_dollar_amount <= 0)
                 THEN
                     INSERT INTO DW_CL.CL_SALES_BAD(sale_id,
+                                                   sale_dt,
                                                    product_name,
                                                    feature_name,
                                                    cost_dollar_amount,
@@ -65,15 +72,35 @@ AS
                                                    restaurant_code,
                                                    src_file_id)
                     VALUES (i.sale_id,
+                            i.sale_dt,
                             i.product_name,
                             i.feature_name,
                             i.cost_dollar_amount,
                             i.coupon_name,
                             i.restaurant_code,
                             'INCORRECT cost_dollar_amount value ');
+                ELSIF (i.sale_dt < to_date('01/01/2000', 'DD/MM/YYYY') or i.sale_dt > current_date)
+                THEN
+                    INSERT INTO DW_CL.CL_SALES_BAD(sale_id,
+                                                   sale_dt,
+                                                   product_name,
+                                                   feature_name,
+                                                   cost_dollar_amount,
+                                                   coupon_name,
+                                                   restaurant_code,
+                                                   src_file_id)
+                    VALUES (i.sale_id,
+                            i.sale_dt,
+                            i.product_name,
+                            i.feature_name,
+                            i.cost_dollar_amount,
+                            i.coupon_name,
+                            i.restaurant_code,
+                            'INCORRECT date value ');
                 ELSE
 
                     INSERT INTO DW_CL.CL_SALES (sale_id,
+                                                sale_dt,
                                                 product_name,
                                                 feature_name,
                                                 cost_dollar_amount,
@@ -81,6 +108,7 @@ AS
                                                 restaurant_code,
                                                 src_file_id)
                     VALUES (i.sale_id,
+                            i.sale_dt,
                             i.product_name,
                             NVL(i.feature_name, '-98'),
                             i.cost_dollar_amount,

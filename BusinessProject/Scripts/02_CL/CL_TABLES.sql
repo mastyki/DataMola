@@ -126,6 +126,7 @@ TABLESPACE TS_DW_CL;
 
 CREATE TABLE CL_SALES (
     SALE_ID                 INTEGER             NOT NULL,
+    SALE_DT                 DATE                NOT NULL,
     PRODUCT_NAME            VARCHAR2(40 BYTE)   NOT NULL,
     FEATURE_NAME            VARCHAR2(40 BYTE)   NOT NULL,
     COST_DOLLAR_AMOUNT      FLOAT               NOT NULL,
@@ -141,6 +142,7 @@ TABLESPACE TS_DW_CL;
 
 CREATE TABLE CL_SALES_BAD (
     SALE_ID                 INTEGER,
+    SALE_DT                 DATE,
     PRODUCT_NAME            VARCHAR2(40 BYTE),
     FEATURE_NAME            VARCHAR2(40 BYTE),
     COST_DOLLAR_AMOUNT      FLOAT,
