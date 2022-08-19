@@ -1,0 +1,6 @@
+ALTER SESSION  SET CURRENT_SCHEMA = DW_CL;
+
+CREATE OR REPLACE PACKAGE pkg_etl_geo_cl
+AS
+    PROCEDURE load_CLEAN_GEO;
+END pkg_etl_geo_cl;

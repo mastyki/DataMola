@@ -1,0 +1,5 @@
+ALTER SESSION  SET CURRENT_SCHEMA = DW_CL;
+CREATE OR REPLACE PACKAGE pkg_etl_coupons_cl
+AS
+    PROCEDURE load_CLEAN_COUPONS;
+END pkg_etl_coupons_cl;
