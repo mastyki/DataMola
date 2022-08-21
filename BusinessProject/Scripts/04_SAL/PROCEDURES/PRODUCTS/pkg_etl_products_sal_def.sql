@@ -1,0 +1,5 @@
+ALTER SESSION  SET CURRENT_SCHEMA = U_DM;
+CREATE OR REPLACE PACKAGE pkg_etl_products_sal
+AS
+    PROCEDURE load_PRODUCTS_SAL;
+END pkg_etl_products_sal;
