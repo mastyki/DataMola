@@ -97,7 +97,7 @@ AS
                             'INCORRECT VALID PERIOD');
                 ELSE
 
-                    INSERT INTO DW_CL.CL_COUPONS(   coupon_id,
+                    INSERT INTO DW_CL.CL_COUPONS(    coupon_id,
                                                      coupon_name,
                                                      coupon_desc,
                                                      media_type_id,

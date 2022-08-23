@@ -57,9 +57,7 @@ AS
                 COST_DOLLAR_AMOUNT,
                 INSERT_DT,
                 UPDATE_DT;
-
             CLOSE ALL_INF;
-
             FOR i IN SALE_ID.FIRST .. SALE_ID.LAST
                 LOOP
                     IF (sale_id(i) IS NULL) THEN
@@ -80,7 +78,8 @@ AS
                                , COST_DOLLAR_AMOUNT(i)
                                , (COST_DOLLAR_AMOUNT(i) - COST_DOLLAR_AMOUNT(i) * (SELECT DISCOUNT_PERCENTAGE
                                                                                    FROM DIM_COUPONS_SCD
-                                                                                   WHERE DIM_COUPONS_SCD.COUPON_ID = COUPON_ID(i)) * .01)
+                                                                                   WHERE DIM_COUPONS_SCD.COUPON_ID =
+                                                                                         COUPON_ID(i)) * .01)
                                , INSERT_DT(i)
                                , UPDATE_DT(i));
 
@@ -94,7 +93,8 @@ AS
                           , GROSS_PROFIT_DOLLAR_AMOUNT = (COST_DOLLAR_AMOUNT(i) -
                                                           COST_DOLLAR_AMOUNT(i) * (SELECT DISCOUNT_PERCENTAGE
                                                                                    FROM DIM_COUPONS_SCD
-                                                                                   WHERE DIM_COUPONS_SCD.COUPON_ID = COUPON_ID(i)) * .01)
+                                                                                   WHERE DIM_COUPONS_SCD.COUPON_ID =
+                                                                                         COUPON_ID(i)) * .01)
                           , UPDATE_DT                  = INSERT_DT(i)
                         WHERE FCT_SALES_DD.SALE_ID = SALE_ID(i);
                     END IF;

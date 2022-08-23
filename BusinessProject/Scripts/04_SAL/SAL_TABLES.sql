@@ -127,7 +127,6 @@ AS
               INNER JOIN t_years y ON t_days.time_id BETWEEN y.beg_of_cal_year AND y.end_of_cal_year
          AND y.type = 'fin');
 
-
 ALTER TABLE DIM_TIME
     ADD CONSTRAINT PK_TIME
         PRIMARY KEY (TIME_ID);
@@ -136,6 +135,8 @@ ALTER TABLE DIM_TIME
 /*==============================================================*/
 /* Table: FCT_SALES_DD                                          */
 /*==============================================================*/
+SELECT *
+FROM FCT_SALES_DD
 
 CREATE TABLE FCT_SALES_DD
 (
@@ -153,5 +154,107 @@ CREATE TABLE FCT_SALES_DD
     CONSTRAINT FK_GEO FOREIGN KEY (GEO_ID) REFERENCES DIM_GEO (GEO_ID),
     CONSTRAINT FK_COUPONS FOREIGN KEY (COUPON_ID) REFERENCES DIM_COUPONS_SCD (COUPON_SURR_ID) ENABLE,
     CONSTRAINT PK_SALES PRIMARY KEY (SALE_ID) ENABLE
+)
+    PARTITION BY RANGE (TIME_ID)
+    subpartition by hash (GEO_ID) subpartitions 4
+(
+    PARTITION archive_until_2021 VALUES LESS THAN (to_date('01.01.2021', 'DD.MM.YYYY'))
+        (
+        subpartition archive_sub_1,
+        subpartition archive_sub_2,
+        subpartition archive_sub_3,
+        subpartition archive_sub_4
+        ),
+    PARTITION q1_2021 VALUES LESS THAN (to_date('01.04.2021', 'DD.MM.YYYY'))
+        (
+        subpartition q1_2021_sub_1,
+        subpartition q1_2021_sub_2,
+        subpartition q1_2021_sub_3,
+        subpartition q1_2021_sub_4
+        ),
+    PARTITION q2_2021 VALUES LESS THAN (to_date('01.07.2021', 'DD.MM.YYYY'))
+        (
+        subpartition q2_2021_sub_1,
+        subpartition q2_2021_sub_2,
+        subpartition q2_2021_sub_3,
+        subpartition q2_2021_sub_4
+        ),
+    PARTITION q3_2021 VALUES LESS THAN (to_date('01.10.2021', 'DD.MM.YYYY'))
+        (
+        subpartition q3_2021_sub_1,
+        subpartition q3_2021_sub_2,
+        subpartition q3_2021_sub_3,
+        subpartition q3_2021_sub_4
+        ),
+    PARTITION q4_2021 VALUES LESS THAN (to_date('01.01.2022', 'DD.MM.YYYY'))
+        (
+        subpartition q4_2021_sub_1,
+        subpartition q4_2021_sub_2,
+        subpartition q4_2021_sub_3,
+        subpartition q4_2021_sub_4
+        ),
+    PARTITION q1_2022 VALUES LESS THAN (to_date('01.04.2022', 'DD.MM.YYYY'))
+        (
+        subpartition q1_2022_sub_1,
+        subpartition q1_2022_sub_2,
+        subpartition q1_2022_sub_3,
+        subpartition q1_2022_sub_4
+        ),
+    PARTITION q2_2022 VALUES LESS THAN (to_date('01.07.2022', 'DD.MM.YYYY'))
+        (
+        subpartition q2_2022_sub_1,
+        subpartition q2_2022_sub_2,
+        subpartition q2_2022_sub_3,
+        subpartition q2_2022_sub_4
+        ),
+    PARTITION q3_2022 VALUES LESS THAN (to_date('01.10.2022', 'DD.MM.YYYY'))
+        (
+        subpartition q3_2022_sub_1,
+        subpartition q3_2022_sub_2,
+        subpartition q3_2022_sub_3,
+        subpartition q3_2022_sub_4
+        ),
+    PARTITION q4_2022 VALUES LESS THAN (to_date('01.01.2023', 'DD.MM.YYYY'))
+        (
+        subpartition q4_2022_sub_1,
+        subpartition q4_2022_sub_2,
+        subpartition q4_2022_sub_3,
+        subpartition q4_2022_sub_4
+        )
+);
+DROP TABLE FCT_SALES_TMP
+
+
+
+CREATE TABLE FCT_SALES_DD
+(
+    SALE_ID                    INTEGER NOT NULL,
+    TIME_ID                    DATE    NOT NULL,
+    PRODUCT_ID                 INTEGER NOT NULL,
+    GEO_ID                     INTEGER NOT NULL,
+    COUPON_ID                  INTEGER NOT NULL,
+    COST_DOLLAR_AMOUNT         FLOAT   NOT NULL,
+    GROSS_PROFIT_DOLLAR_AMOUNT FLOAT   NOT NULL,
+    INSERT_DT                  DATE    NOT NULL,
+    UPDATE_DT                  DATE    NOT NULL,
+    CONSTRAINT FK_TIME FOREIGN KEY (TIME_ID) REFERENCES DIM_TIME (TIME_ID),
+    CONSTRAINT FK_PRODUCT FOREIGN KEY (PRODUCT_ID) REFERENCES DIM_PRODUCTS (PRODUCT_ID),
+    CONSTRAINT FK_GEO FOREIGN KEY (GEO_ID) REFERENCES DIM_GEO (GEO_ID),
+    CONSTRAINT FK_COUPONS FOREIGN KEY (COUPON_ID) REFERENCES DIM_COUPONS_SCD (COUPON_SURR_ID) ENABLE,
+    CONSTRAINT PK_SALES PRIMARY KEY (SALE_ID) ENABLE
+)
+    PARTITION BY RANGE (TIME_ID)
+(
+    PARTITION archive_until_2021 VALUES LESS THAN (to_date('01.01.2021', 'DD.MM.YYYY')),
+    PARTITION q1_2021 VALUES LESS THAN (to_date('01.04.2021', 'DD.MM.YYYY')),
+    PARTITION q2_2021 VALUES LESS THAN (to_date('01.07.2021', 'DD.MM.YYYY')),
+    PARTITION q3_2021 VALUES LESS THAN (to_date('01.10.2021', 'DD.MM.YYYY')),
+    PARTITION q4_2021 VALUES LESS THAN (to_date('01.01.2022', 'DD.MM.YYYY')),
+    PARTITION q1_2022 VALUES LESS THAN (to_date('01.04.2022', 'DD.MM.YYYY')),
+    PARTITION q2_2022 VALUES LESS THAN (to_date('01.07.2022', 'DD.MM.YYYY')),
+    PARTITION q3_2022 VALUES LESS THAN (to_date('01.10.2022', 'DD.MM.YYYY')),
+    PARTITION q4_2022 VALUES LESS THAN (to_date('01.01.2023', 'DD.MM.YYYY'))
 );
 
+    select DP.PRODUCT_ID, PRODUCT_NAME, CATEGORY_NAME,SUBCATEGORY_NAME, FEATURE_NAME, COUNTRY_NAME, DT.time_id, DISCOUNT_PERCENTAGE, COST_DOLLAR_AMOUNT, GROSS_PROFIT_DOLLAR_AMOUNT from FCT_SALES_DD inner join DIM_COUPONS_SCD DCS on FCT_SALES_DD.COUPON_ID = DCS.COUPON_SURR_ID
+        inner join DIM_GEO DG on DG.GEO_ID = FCT_SALES_DD.GEO_ID inner join DIM_PRODUCTS DP on DP.PRODUCT_ID = FCT_SALES_DD.PRODUCT_ID inner join DIM_TIME DT on FCT_SALES_DD.TIME_ID = DT.time_id

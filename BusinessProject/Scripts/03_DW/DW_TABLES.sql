@@ -49,7 +49,7 @@ CREATE TABLE DW_COUPONS
     VALID_TO            DATE                                NOT NULL,
     SRC_FILE_ID         VARCHAR2(6 BYTE)                    NOT NULL,
     INSERT_DT           DATE                                NOT NULL,
-    CONSTRAINT PK_COUPONS PRIMARY KEY (COUPON_ID) ENABLE
+    CONSTRAINT PK_COUPONS PRIMARY KEY (COUPON_ID, VALID_FROM, VALID_TO) ENABLE
 )
     TABLESPACE TS_DW_DATA_01;
 

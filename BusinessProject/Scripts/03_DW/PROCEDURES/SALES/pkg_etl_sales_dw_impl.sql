@@ -1,17 +1,5 @@
 GRANT SELECT ON DW_CL.cl_sales TO DW_DATA;
 alter session set current_schema = DW_DATA;
-SELECT SALE_ID,
-       SALE_SRC_ID,
-       SALE_DT,
-       PRODUCT_NAME,
-       FEATURE_NAME,
-       COST_DOLLAR_AMOUNT,
-       COUPON_NAME,
-       RESTAURANT_CODE,
-       SRC_FILE_ID,
-       INSERT_DT,
-       UPDATE_DT
-FROM DW_SALES;
 
 CREATE OR
     REPLACE
@@ -47,9 +35,7 @@ AS
             SRC_FILE_ID     CURSOR_VARCHAR6;
         BEGIN
             OPEN ALL_INF FOR
-                SELECT
-
-                    SALES.sale_id
+                SELECT SALES.sale_id
                      , SOURCE_SALES.SALE_ID
                      , SOURCE_SALES.SALE_DT
                      , PRODUCT.product_id
@@ -69,7 +55,7 @@ AS
                          INNER JOIN
                      DW_DATA.DW_COUPONS COUPON
                      ON (SOURCE_SALES.coupon_name = COUPON.coupon_name
-                             AND SOURCE_SALES.SALE_DT BETWEEN COUPON.VALID_FROM AND COUPON.VALID_TO)
+                         AND SOURCE_SALES.SALE_DT BETWEEN COUPON.VALID_FROM AND COUPON.VALID_TO)
                          INNER JOIN
                      DW_DATA.DW_GEO geo
                      ON (SOURCE_SALES.RESTAURANT_CODE = geo.RESTAURANT_CODE)
@@ -92,7 +78,6 @@ AS
                 , restaurant_code
                 , cost
                 , src_file_id;
-
             CLOSE ALL_INF;
 
             FOR i IN sale_id.FIRST .. sale_id.LAST
@@ -122,10 +107,27 @@ AS
                                , restaurant_code(i)
                                , cost(i)
                                , src_file_id(i)
-                               ,  (select insert_dt from u_sa_layer.sa_mtd_files where file_id = src_file_id(i))
-                               ,  (select insert_dt from u_sa_layer.sa_mtd_files where file_id = src_file_id(i)));
-                        COMMIT;
+                               , (select insert_dt from u_sa_layer.sa_mtd_files where file_id = src_file_id(i))
+                               , (select insert_dt from u_sa_layer.sa_mtd_files where file_id = src_file_id(i)));
+
+                    ELSE
+                        UPDATE DW_DATA.DW_SALES
+                        SET sale_src_id        = sale_src_id(i)
+                          , sale_dt            =sale_dt(i)
+                          , product_id         = product_id(i)
+                          , product_name       = product_name(i)
+                          , feature_name       = product_feature(i)
+                          , coupon_id          =coupon_id(i)
+                          , coupon_name        = coupon_name(i)
+                          , geo_id             = geo_id(i)
+                          , restaurant_code    =restaurant_code(i)
+                          , cost_dollar_amount = cost(i)
+                          , src_file_id        = src_file_id(i)
+                          , update_dt          =(select insert_dt
+                                                 from u_sa_layer.sa_mtd_files
+                                                 where file_id = src_file_id(i));
                     END IF;
+                    COMMIT;
                 END LOOP;
         END;
     END LOAD_SALES_DW;

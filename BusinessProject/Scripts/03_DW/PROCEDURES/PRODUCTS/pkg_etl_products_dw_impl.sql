@@ -1,7 +1,8 @@
 alter session set current_schema = DW_DATA;
 GRANT SELECT ON dw_cl.cl_products TO DW_DATA;
 GRANT SELECT ON u_sa_layer.sa_mtd_files TO DW_DATA;
-
+GRANT SELECT ON DW_DATA.DW_SALES TO U_DM;
+SELECT * FROM DW_SALES ORDER BY SALE_DT DESC
 CREATE OR
 REPLACE
 PACKAGE

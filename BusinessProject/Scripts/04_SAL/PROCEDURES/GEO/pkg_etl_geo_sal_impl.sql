@@ -55,7 +55,6 @@ AS
                 RESTAURANT_CODE,
                 INSERT_DT,
                 UPDATE_DT;
-
             CLOSE ALL_INF;
 
             FOR i IN GEO_ID.FIRST .. GEO_ID.LAST
