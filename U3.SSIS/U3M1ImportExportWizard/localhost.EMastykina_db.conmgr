@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.EMastykina_db"
+  DTS:DTSID="{E946038B-7979-4997-8DFA-CF7D13527322}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;Initial Catalog=EMastykina_db;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-U3M1ImportExportWizard-{E946038B-7979-4997-8DFA-CF7D13527322}localhost.EMastykina_db;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
