@@ -1,0 +1,1574 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/28/2022 7:48:09 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-O2ARSK0U"
+  DTS:CreatorName="LAPTOP-O2ARSK0U\lizam"
+  DTS:DTSID="{1E7CF8DC-762D-48A6-91B7-C13F83295179}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.694.0"
+  DTS:LocaleID="8192"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{9684E139-C3C8-458D-8A8B-E957BECA86AD}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[File EmpNotSales]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EC82757C-57FF-43F3-B80F-3F61234B7F8E}"
+      DTS:ObjectName="File EmpNotSales">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="8192"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1251"
+          DTS:ConnectionString="C:\Users\lizam\Documents\GitHub\DataMola\U3.SSIS\U3M3\Results\EmpNotSales.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstName"
+              DTS:DTSID="{1CCE42AE-18DC-46DC-9B09-2303786EF593}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastName"
+              DTS:DTSID="{AE6BFBF2-A6E9-46CC-A2D4-3B68299F3856}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EmailAddress"
+              DTS:DTSID="{A08250B3-D18B-4AFC-97B8-435C15F2D2BF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[File EmpNull]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EC185507-B0C7-49BD-920A-92772CF474FB}"
+      DTS:ObjectName="File EmpNull">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="8192"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\lizam\Documents\GitHub\DataMola\U3.SSIS\U3M3\Results\EmpNull.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BusinessEntityID"
+              DTS:DTSID="{364D7DE1-B8A9-4A78-BD35-8646FC4859C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstName"
+              DTS:DTSID="{672A9A37-0C52-405A-89AB-DA27C761E8DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastName"
+              DTS:DTSID="{36627784-1174-4F28-97B0-4EDE45C5D874}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="JobTitle"
+              DTS:DTSID="{E95BD323-E5AB-46E2-82AB-46DC30A4494B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EmailAddress"
+              DTS:DTSID="{E136543E-048B-42A4-BDE0-97D02CF744C4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[File EmpSales]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7EBD7046-684B-4F18-A98B-ED7AD5889312}"
+      DTS:ObjectName="File EmpSales">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="8192"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1251"
+          DTS:ConnectionString="C:\Users\lizam\Documents\GitHub\DataMola\U3.SSIS\U3M3\Results\EmpSales.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BusinessEntityID"
+              DTS:DTSID="{4AB7B50F-7A57-4696-B468-3F0FC02BA92A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstName"
+              DTS:DTSID="{CDA6B9BC-D7A3-4D3D-B5B0-6A39E12808C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastName"
+              DTS:DTSID="{33582079-7778-4214-908E-557C3F39A8A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="JobTitle"
+              DTS:DTSID="{466C2038-CD60-41E5-BE4D-B6C20BFE2903}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EmailAddress"
+              DTS:DTSID="{5A875914-1372-4778-BA49-1A3147002800}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.HumanResources]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DBC196B4-DB2A-4B8C-8D81-256DABCA03FD}"
+      DTS:ObjectName="localhost.HumanResources">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=HumanResources;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{DBC196B4-DB2A-4B8C-8D81-256DABCA03FD}localhost.HumanResources;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Задача потока данных"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{0939FD67-1C63-4219-A7BF-FDBF34D5C3DA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Задача потока данных"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Задача потока данных\Destination EmpNotSales"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Назначение &quot;Неструктурированный файл&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
+              description="Назначение &quot;Неструктурированный файл&quot;"
+              localeId="8192"
+              name="Destination EmpNotSales"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, следует ли перезаписывать данные в целевой файл или добавлять их в его конец."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Задает текст, который записывается в целевой файл перед записью любых данных."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Если ограничитель текста включен, указывает, будут ли добавляться escape-символы для ограничителя в данных, записываемых в конечный файл."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\Destination EmpNotSales.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[File EmpNotSales]"
+                  connectionManagerRefId="Package.ConnectionManagers[File EmpNotSales]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\Destination EmpNotSales.Inputs[Вход назначения &quot;Неструктурированный файл&quot;]"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;Неструктурированный файл&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Destination EmpNotSales.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[FirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FirstName"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Задача потока данных\Destination EmpNotSales.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[FirstName]"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Destination EmpNotSales.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[LastName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="LastName"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Задача потока данных\Destination EmpNotSales.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[LastName]"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Destination EmpNotSales.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[EmailAddress]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EmailAddress"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Задача потока данных\Destination EmpNotSales.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[EmailAddress]"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[EmailAddress]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Destination EmpNotSales.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Destination EmpNotSales.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Destination EmpNotSales.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[EmailAddress]"
+                      dataType="wstr"
+                      length="50"
+                      name="EmailAddress" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\Destination EmpNull"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Назначение &quot;Неструктурированный файл&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
+              description="Назначение &quot;Неструктурированный файл&quot;"
+              localeId="8192"
+              name="Destination EmpNull"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, следует ли перезаписывать данные в целевой файл или добавлять их в его конец."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Задает текст, который записывается в целевой файл перед записью любых данных."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Если ограничитель текста включен, указывает, будут ли добавляться escape-символы для ограничителя в данных, записываемых в конечный файл."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\Destination EmpNull.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[File EmpNull]"
+                  connectionManagerRefId="Package.ConnectionManagers[File EmpNull]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\Destination EmpNull.Inputs[Вход назначения &quot;Неструктурированный файл&quot;]"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;Неструктурированный файл&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Destination EmpNull.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[FirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FirstName"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Задача потока данных\Destination EmpNull.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[FirstName]"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Destination EmpNull.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[LastName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="LastName"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Задача потока данных\Destination EmpNull.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[LastName]"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Destination EmpNull.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[EmailAddress]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EmailAddress"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Задача потока данных\Destination EmpNull.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[EmailAddress]"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[EmailAddress]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Destination EmpNull.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Destination EmpNull.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Destination EmpNull.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[EmailAddress]"
+                      dataType="wstr"
+                      length="50"
+                      name="EmailAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Destination EmpNull.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[BusinessEntityID]"
+                      dataType="i4"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Destination EmpNull.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[JobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      name="JobTitle" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\Destination EmpSale"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Назначение &quot;Неструктурированный файл&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
+              description="Назначение &quot;Неструктурированный файл&quot;"
+              localeId="8192"
+              name="Destination EmpSale"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, следует ли перезаписывать данные в целевой файл или добавлять их в его конец."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Задает текст, который записывается в целевой файл перед записью любых данных."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Если ограничитель текста включен, указывает, будут ли добавляться escape-символы для ограничителя в данных, записываемых в конечный файл."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\Destination EmpSale.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[File EmpSales]"
+                  connectionManagerRefId="Package.ConnectionManagers[File EmpSales]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\Destination EmpSale.Inputs[Вход назначения &quot;Неструктурированный файл&quot;]"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;Неструктурированный файл&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Destination EmpSale.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[FirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FirstName"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Задача потока данных\Destination EmpSale.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[FirstName]"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Destination EmpSale.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[LastName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="LastName"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Задача потока данных\Destination EmpSale.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[LastName]"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Destination EmpSale.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].Columns[EmailAddress]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EmailAddress"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Задача потока данных\Destination EmpSale.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[EmailAddress]"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[EmailAddress]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Destination EmpSale.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[FirstName]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Destination EmpSale.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[LastName]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Destination EmpSale.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[EmailAddress]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="EmailAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Destination EmpSale.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[BusinessEntityID]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Destination EmpSale.Inputs[Вход назначения &quot;Неструктурированный файл&quot;].ExternalColumns[JobTitle]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="JobTitle" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\EmailAddressesAW Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Уточняющий запрос;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;6"
+              description="Присоединяет дополнительные столбцы к потоку данных путем поиска значений в таблице. Пример: соединение со столбцом &quot;employee id&quot; таблицы employees позволяет получить значения &quot;hire date&quot; и &quot;employee name&quot;. Рекомендуется воспользоваться этим преобразованием, если таблица подстановки не помещается в памяти."
+              name="EmailAddressesAW Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Задает инструкцию SQL, которая формирует таблицу уточняющих запросов."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[EmailAddressesAW]</property>
+                <property
+                  dataType="System.String"
+                  description="Задает инструкцию SQL, которая использует параметры для формирования таблицы уточняющих запросов."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[EmailAddressesAW]) [refTable]
+where [refTable].[BusinessEntityID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает тип соединения, используемого для доступа к эталонному набору данных."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает тип кэша таблицы уточняющих запросов."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает, как преобразование &quot;Уточняющий запрос&quot; обрабатывает строки без совпадающих элементов в эталонном наборе данных."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает долю кэша (в процентах), выделенную для строк без совпадающих элементов в эталонном наборе данных."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Максимальный объем памяти для кэша ссылок на 32-разрядной платформе."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Максимальный объем памяти для кэша ссылок на 64-разрядной платформе."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает, следует ли ссылаться на метаданные в формате XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="EmailAddressId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="BusinessEntityID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EmailAddress" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Задает список идентификаторов журнала обращений и преобразований, сопоставляемый с параметрами, которые использует инструкция SQL в свойстве SQLCommand. Элементы списка разделяются точками с запятой."
+                  name="ParameterMap">#{Package\Задача потока данных\Source EmployeesAW  "OLE DB".Outputs[Выход источника "OLE DB"].Columns[BusinessEntityID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Определяет, должны ли повторяющиеся ключи в ссылочных данных обрабатываться как ошибки при использовании режима полного кэширования."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\EmailAddressesAW Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.HumanResources]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.HumanResources]"
+                  description="Диспетчер соединений, используемый для доступа к данным уточняющих запросов."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\EmailAddressesAW Lookup.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]"
+                  name="Ввод преобразования &quot;Уточняющий запрос&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\EmailAddressesAW Lookup.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;].Columns[BusinessEntityID]"
+                      cachedDataType="i4"
+                      cachedName="BusinessEntityID"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[BusinessEntityID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Указывает в ссылочной таблице столбец, который соединен с данным столбцом."
+                          name="JoinToReferenceColumn">BusinessEntityID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\EmailAddressesAW Lookup.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;]"
+                  errorOrTruncationOperation="Уточняющий запрос"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Вывод совпадений преобразования &quot;Уточняющий запрос&quot;"
+                  synchronousInputId="Package\Задача потока данных\EmailAddressesAW Lookup.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\EmailAddressesAW Lookup.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[EmailAddress]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Копировать столбец"
+                      length="50"
+                      lineageId="Package\Задача потока данных\EmailAddressesAW Lookup.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[EmailAddress]"
+                      name="EmailAddress"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
+                          name="CopyFromReferenceColumn">EmailAddress</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Задача потока данных\EmailAddressesAW Lookup.Outputs[Выход несовпадающих строк уточняющего запроса]"
+                  description="Вывод преобразования &quot;Уточняющий запрос&quot;, которое обрабатывает строки без совпадающих элементов в эталонном наборе данных. Используйте этот выход, если свойство NoMatchBehavior имеет значение &quot;Отправить строки без совпадающих элементов в выход несовпадающих строк&quot;."
+                  exclusionGroup="1"
+                  name="Выход несовпадающих строк уточняющего запроса"
+                  synchronousInputId="Package\Задача потока данных\EmailAddressesAW Lookup.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Задача потока данных\EmailAddressesAW Lookup.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
+                  synchronousInputId="Package\Задача потока данных\EmailAddressesAW Lookup.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\EmailAddressesAW Lookup.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\EmailAddressesAW Lookup.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\EmailAddressesAW Lookup.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\EmailAddressesAW Lookup.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\JobTitle Condition"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Условное разбиение;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;0"
+              description="Распределяет строки данных по разным выходам в зависимости от содержимого данных. Используйте условие (выражения SSIS), чтобы указать распределяемые строки. Пример: разделение записей, которые необходимо очистить, от подготовленных к загрузке или распределение только подмножества записей."
+              name="JobTitle Condition"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\JobTitle Condition.Inputs[Вход условного разбиения]"
+                  description="Ввод преобразования &quot;Условное разбиение&quot;"
+                  name="Вход условного разбиения">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\JobTitle Condition.Inputs[Вход условного разбиения].Columns[JobTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="JobTitle"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[JobTitle]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\JobTitle Condition.Outputs[JobTitle is “Sales Representative”]"
+                  description="Вывод 1 преобразования &quot;Условное разбиение&quot;"
+                  errorOrTruncationOperation="Вычисление"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="JobTitle is “Sales Representative”"
+                  synchronousInputId="Package\Задача потока данных\JobTitle Condition.Inputs[Вход условного разбиения]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Указывает выражение. Версия этого выражения использует вместо имен столбцов идентификаторы журнала обращений и преобразований."
+                      name="Expression">#{Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[JobTitle]} == "Sales Representative"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Задает понятную версию выражения. Эта версия выражения использует имена столбцов."
+                      expressionType="Notify"
+                      name="FriendlyExpression">JobTitle == "Sales Representative"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Указывает положение условия в списке условий, который вычисляется преобразованием. Вычисление производится в порядке от меньшего к большему значению."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Задача потока данных\JobTitle Condition.Outputs[Null case]"
+                  description="Вывод 2 преобразования &quot;Условное разбиение&quot;"
+                  errorOrTruncationOperation="Вычисление"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Null case"
+                  synchronousInputId="Package\Задача потока данных\JobTitle Condition.Inputs[Вход условного разбиения]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Указывает выражение. Версия этого выражения использует вместо имен столбцов идентификаторы журнала обращений и преобразований."
+                      name="Expression">[ISNULL](#{Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[JobTitle]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Задает понятную версию выражения. Эта версия выражения использует имена столбцов."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(JobTitle)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Указывает положение условия в списке условий, который вычисляется преобразованием. Вычисление производится в порядке от меньшего к большему значению."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Задача потока данных\JobTitle Condition.Outputs[Выход по умолчанию условного разбиения]"
+                  description="Выход по умолчанию преобразования &quot;Условное разбиение&quot;"
+                  exclusionGroup="1"
+                  name="Выход по умолчанию условного разбиения"
+                  synchronousInputId="Package\Задача потока данных\JobTitle Condition.Inputs[Вход условного разбиения]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Задача потока данных\JobTitle Condition.Outputs[Вывод ошибок условного разбиения]"
+                  description="Вывод ошибок преобразования &quot;Условное разбиение&quot;"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок условного разбиения"
+                  synchronousInputId="Package\Задача потока данных\JobTitle Condition.Inputs[Вход условного разбиения]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\JobTitle Condition.Outputs[Вывод ошибок условного разбиения].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\JobTitle Condition.Outputs[Вывод ошибок условного разбиения].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\JobTitle Condition.Outputs[Вывод ошибок условного разбиения].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\JobTitle Condition.Outputs[Вывод ошибок условного разбиения].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\Null Condition"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Условное разбиение;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;0"
+              description="Распределяет строки данных по разным выходам в зависимости от содержимого данных. Используйте условие (выражения SSIS), чтобы указать распределяемые строки. Пример: разделение записей, которые необходимо очистить, от подготовленных к загрузке или распределение только подмножества записей."
+              name="Null Condition"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\Null Condition.Inputs[Вход условного разбиения]"
+                  description="Ввод преобразования &quot;Условное разбиение&quot;"
+                  name="Вход условного разбиения">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Null Condition.Inputs[Вход условного разбиения].Columns[JobTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="JobTitle"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[JobTitle]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\Null Condition.Outputs[Null case]"
+                  description="Вывод 2 преобразования &quot;Условное разбиение&quot;"
+                  errorOrTruncationOperation="Вычисление"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Null case"
+                  synchronousInputId="Package\Задача потока данных\Null Condition.Inputs[Вход условного разбиения]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Указывает выражение. Версия этого выражения использует вместо имен столбцов идентификаторы журнала обращений и преобразований."
+                      name="Expression">[ISNULL](#{Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[JobTitle]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Задает понятную версию выражения. Эта версия выражения использует имена столбцов."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(JobTitle)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Указывает положение условия в списке условий, который вычисляется преобразованием. Вычисление производится в порядке от меньшего к большему значению."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Задача потока данных\Null Condition.Outputs[Выход по умолчанию условного разбиения]"
+                  description="Выход по умолчанию преобразования &quot;Условное разбиение&quot;"
+                  exclusionGroup="1"
+                  name="Выход по умолчанию условного разбиения"
+                  synchronousInputId="Package\Задача потока данных\Null Condition.Inputs[Вход условного разбиения]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Задача потока данных\Null Condition.Outputs[Вывод ошибок условного разбиения]"
+                  description="Вывод ошибок преобразования &quot;Условное разбиение&quot;"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок условного разбиения"
+                  synchronousInputId="Package\Задача потока данных\Null Condition.Inputs[Вход условного разбиения]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Null Condition.Outputs[Вывод ошибок условного разбиения].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Null Condition.Outputs[Вывод ошибок условного разбиения].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Null Condition.Outputs[Вывод ошибок условного разбиения].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Null Condition.Outputs[Вывод ошибок условного разбиения].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Сортировка;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
+              description="Сортирует входные данные по возрастанию или убыванию, если выполнить сортировку в источнике нельзя. Пример: сортировка данных продаж по полю &quot;customer id&quot; перед записью в неструктурированный файл и передачей в другой отдел. Примечание. Это преобразование не рекомендуется применять к большим потокам данных."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, удаляет ли преобразование &quot;Сортировка&quot; строки с повторяющимися значениями сортировки."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает максимальное число потоков, используемых для сортировки."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\Sort.Inputs[Вход сортировки]"
+                  name="Вход сортировки">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Sort.Inputs[Вход сортировки].Columns[BusinessEntityID]"
+                      cachedDataType="i4"
+                      cachedName="BusinessEntityID"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[BusinessEntityID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Sort.Inputs[Вход сортировки].Columns[FirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FirstName"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[FirstName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Sort.Inputs[Вход сортировки].Columns[LastName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="LastName"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[LastName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Sort.Inputs[Вход сортировки].Columns[JobTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="JobTitle"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[JobTitle]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Sort.Inputs[Вход сортировки].Columns[EmailAddress]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EmailAddress"
+                      lineageId="Package\Задача потока данных\EmailAddressesAW Lookup.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;].Columns[EmailAddress]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\Sort.Outputs[Выход сортировки]"
+                  isSorted="true"
+                  name="Выход сортировки">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[BusinessEntityID]"
+                      name="BusinessEntityID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Задача потока данных\Source EmployeesAW  "OLE DB".Outputs[Выход источника "OLE DB"].Columns[BusinessEntityID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[FirstName]"
+                      name="FirstName"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Задача потока данных\Source EmployeesAW  "OLE DB".Outputs[Выход источника "OLE DB"].Columns[FirstName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[LastName]"
+                      name="LastName"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Задача потока данных\Source EmployeesAW  "OLE DB".Outputs[Выход источника "OLE DB"].Columns[LastName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[JobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[JobTitle]"
+                      name="JobTitle">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Задача потока данных\Source EmployeesAW  "OLE DB".Outputs[Выход источника "OLE DB"].Columns[JobTitle]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[EmailAddress]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Задача потока данных\Sort.Outputs[Выход сортировки].Columns[EmailAddress]"
+                      name="EmailAddress"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Задача потока данных\EmailAddressesAW Lookup.Outputs[Вывод совпадений преобразования "Уточняющий запрос"].Columns[EmailAddress]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="Source EmployeesAW  &quot;OLE DB&quot;"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[EmployeesAW]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.HumanResources]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.HumanResources]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[BusinessEntityID]"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[BusinessEntityID]"
+                      name="BusinessEntityID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[FirstName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[FirstName]"
+                      length="50"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[FirstName]"
+                      name="FirstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[LastName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[LastName]"
+                      length="50"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[LastName]"
+                      name="LastName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[JobTitle]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[JobTitle]"
+                      length="50"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[JobTitle]"
+                      name="JobTitle"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[BusinessEntityID]"
+                      dataType="i4"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[JobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      name="JobTitle" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[BusinessEntityID]"
+                      name="BusinessEntityID" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[FirstName]"
+                      name="FirstName" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[LastName]"
+                      name="LastName" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[JobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[JobTitle]"
+                      name="JobTitle" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Задача потока данных.Paths[JobTitle is “Sales Representative”]"
+              endId="Package\Задача потока данных\Destination EmpSale.Inputs[Вход назначения &quot;Неструктурированный файл&quot;]"
+              name="JobTitle is “Sales Representative”"
+              startId="Package\Задача потока данных\JobTitle Condition.Outputs[JobTitle is “Sales Representative”]" />
+            <path
+              refId="Package\Задача потока данных.Paths[Null case]"
+              endId="Package\Задача потока данных\Destination EmpNull.Inputs[Вход назначения &quot;Неструктурированный файл&quot;]"
+              name="Null case"
+              startId="Package\Задача потока данных\Null Condition.Outputs[Null case]" />
+            <path
+              refId="Package\Задача потока данных.Paths[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;]"
+              endId="Package\Задача потока данных\Sort.Inputs[Вход сортировки]"
+              name="Вывод совпадений преобразования &quot;Уточняющий запрос&quot;"
+              startId="Package\Задача потока данных\EmailAddressesAW Lookup.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;]" />
+            <path
+              refId="Package\Задача потока данных.Paths[Выход источника &quot;OLE DB&quot;]"
+              endId="Package\Задача потока данных\EmailAddressesAW Lookup.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;]" />
+            <path
+              refId="Package\Задача потока данных.Paths[Выход по умолчанию условного разбиения]"
+              endId="Package\Задача потока данных\Destination EmpNotSales.Inputs[Вход назначения &quot;Неструктурированный файл&quot;]"
+              name="Выход по умолчанию условного разбиения"
+              startId="Package\Задача потока данных\JobTitle Condition.Outputs[Выход по умолчанию условного разбиения]" />
+            <path
+              refId="Package\Задача потока данных.Paths[Выход по умолчанию условного разбиения1]"
+              endId="Package\Задача потока данных\JobTitle Condition.Inputs[Вход условного разбиения]"
+              name="Выход по умолчанию условного разбиения"
+              startId="Package\Задача потока данных\Null Condition.Outputs[Выход по умолчанию условного разбиения]" />
+            <path
+              refId="Package\Задача потока данных.Paths[Выход сортировки]"
+              endId="Package\Задача потока данных\Null Condition.Inputs[Вход условного разбиения]"
+              name="Выход сортировки"
+              startId="Package\Задача потока данных\Sort.Outputs[Выход сортировки]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="193.333333333334,42.6666666666667"
+          Id="Package\Задача потока данных"
+          TopLeft="209.374996880069,185.42105612167" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Задача потока данных">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="238.666666666667,42.6666666666667"
+          Id="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;"
+          TopLeft="328.124995110557,109.473686271097" />
+        <NodeLayout
+          Size="212,42.6666666666667"
+          Id="Package\Задача потока данных\EmailAddressesAW Lookup"
+          TopLeft="339.374994942919,240.157899257219" />
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Выход источника &quot;OLE DB&quot;]"
+          TopLeft="446.416661693404,152.140352937764">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,88.0175463194551"
+              Start="0,0"
+              End="0,80.5175463194551">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.5175463194551" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="165.333333333334,42.6666666666667"
+          Id="Package\Задача потока данных\JobTitle Condition"
+          TopLeft="183.749997261912,554.210536747428" />
+        <NodeLayout
+          Size="98.6666666666667,42.6666666666667"
+          Id="Package\Задача потока данных\Sort"
+          TopLeft="394.874994197861,363.342111998648" />
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;]"
+          TopLeft="444.791661237056,282.824565923885">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,80.5175460747625"
+              Start="0,0"
+              End="0,73.0175460747625">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.0175460747625" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-134.68986328125,30.5087730373812,269.3797265625,12"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="180,42.6666666666667"
+          Id="Package\Задача потока данных\Destination EmpSale"
+          TopLeft="1.24999998137349,667.789486253691" />
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[JobTitle is “Sales Representative”]"
+          TopLeft="240.194441706356,596.877203414094">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-148.944441724983,70.9122828395964"
+              Start="0,0"
+              End="-148.944441724983,63.4122828395964">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.7727154013698" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.7727154013698"
+                    Point2="0,28.7727154013698"
+                    Point3="-4,28.7727154013698" />
+                  <mssgle:LineSegment
+                    End="-144.944441724983,28.7727154013698" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-144.944441724983,28.7727154013698"
+                    Point2="-148.944441724983,28.7727154013698"
+                    Point3="-148.944441724983,32.7727154013698" />
+                  <mssgle:LineSegment
+                    End="-148.944441724983,63.4122828395964" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-157.534720862491,33.7727154013698,166.125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="200.666666666667,42.6666666666667"
+          Id="Package\Задача потока данных\Destination EmpNotSales"
+          TopLeft="342.499994896353,666.421065175302" />
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Выход по умолчанию условного разбиения]"
+          TopLeft="292.638886150801,596.877203414094">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="150.194442078885,69.5438617612081"
+              Start="0,0"
+              End="150.194442078885,62.0438617612081">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.2174774558257" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.2174774558257"
+                    Point2="0,28.2174774558257"
+                    Point3="4,28.2174774558257" />
+                  <mssgle:LineSegment
+                    End="146.194442078885,28.2174774558257" />
+                  <mssgle:CubicBezierSegment
+                    Point1="146.194442078885,28.2174774558257"
+                    Point2="150.194442078885,28.2174774558257"
+                    Point3="150.194442078885,32.2174774558257" />
+                  <mssgle:LineSegment
+                    End="150.194442078885,62.0438617612081" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-24.7062555230574,33.2174774558257,199.606953125,11.6533203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,42.6666666666667"
+          Id="Package\Задача потока данных\Destination EmpNull"
+          TopLeft="642.958324010794,550.105273512262" />
+        <NodeLayout
+          Size="146.666666666667,42.6666666666667"
+          Id="Package\Задача потока данных\Null Condition"
+          TopLeft="369.374994495884,467.315798269745" />
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Выход сортировки]"
+          TopLeft="443.458327680206,406.008778665314">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.3070196044303"
+              Start="0,0"
+              End="0,53.8070196044303">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.8070196044303" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Null case]"
+          TopLeft="465.819438940329,509.982464936411">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="265.138885070466,40.1228085758504"
+              Start="0,0"
+              End="265.138885070466,32.6228085758504">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.3089113995363" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.3089113995363"
+                    Point2="0,16.3089113995363"
+                    Point3="4,16.3089113995363" />
+                  <mssgle:LineSegment
+                    End="261.138885070466,16.3089113995363" />
+                  <mssgle:CubicBezierSegment
+                    Point1="261.138885070466,16.3089113995363"
+                    Point2="265.138885070466,16.3089113995363"
+                    Point3="265.138885070466,20.3089113995363" />
+                  <mssgle:LineSegment
+                    End="265.138885070466,32.6228085758504" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="112.298094878983,21.3089113995363,40.5426953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Выход по умолчанию условного разбиения1]"
+          TopLeft="419.597216718106,509.982464936411">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-153.180552789528,44.2280718110163"
+              Start="0,0"
+              End="-153.180552789528,36.7280718110163">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.9775975346937" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.9775975346937"
+                    Point2="0,17.9775975346937"
+                    Point3="-4,17.9775975346937" />
+                  <mssgle:LineSegment
+                    End="-149.180552789528,17.9775975346937" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-149.180552789528,17.9775975346937"
+                    Point2="-153.180552789528,17.9775975346937"
+                    Point3="-153.180552789528,21.9775975346937" />
+                  <mssgle:LineSegment
+                    End="-153.180552789528,36.7280718110163" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-176.393752957264,22.9775975346937,199.606953125,11.6533203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\Source EmployeesAW  &quot;OLE DB&quot;">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\EmailAddressesAW Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[EmailAddressesAW]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,100 @@
+1		Guy	R	Gilbert		Production Technician - WC60	320-555-0195	guy1@adventure-works.com	0	7726 Driftwood Drive		Monroe	Washington	98272	United States	
+2		Kevin	F	Brown		Marketing Assistant	150-555-0189	kevin0@adventure-works.com	2	7883 Missing Canyon Court		Everett	Washington	98201	United States	
+3		Roberto		Tamburello		Engineering Manager	212-555-0187	roberto0@adventure-works.com	0	2137 Birchwood Dr		Redmond	Washington	98052	United States	
+4		Rob		Walters		Senior Tool Designer	612-555-0100	rob0@adventure-works.com	0	5678 Lakeview Blvd.		Minneapolis	Minnesota	55402	United States	
+5		Thierry	B	D'Hers		Tool Designer	168-555-0183	thierry0@adventure-works.com	2	1970 Napa Ct.		Bothell	Washington	98011	United States	
+6		David	M	Bradley		Marketing Manager	913-555-0172	david0@adventure-works.com	1	3768 Door Way		Redmond	Washington	98052	United States	
+7		JoLynn	M	Dobney		Production Supervisor - WC60	903-555-0145	jolynn0@adventure-works.com	1	7126 Ending Ct.		Seattle	Washington	98104	United States	
+8		Ruth	Ann	Ellerbrock		Production Technician - WC10	145-555-0130	ruth0@adventure-works.com	0	2176 Apollo Way		Everett	Washington	98201	United States	
+9	Ms.	Gail	A	Erickson		Design Engineer	849-555-0139	gail0@adventure-works.com	0	9435 Breck Court		Bellevue	Washington	98004	United States	
+10		Barry	K	Johnson		Production Technician - WC10	206-555-0180	barry0@adventure-works.com	0	3114 Notre Dame Ave.		Snohomish	Washington	98296	United States	
+11	Mr.	Jossef	H	Goldberg		Design Engineer	122-555-0189	jossef0@adventure-works.com	0	5670 Bel Air Dr.		Renton	Washington	98055	United States	
+12		Terri	Lee	Duffy		Vice President of Engineering	819-555-0175	terri0@adventure-works.com	1	7559 Worth Ct.		Renton	Washington	98055	United States	
+13		Sidney	M	Higa		Production Technician - WC10	424-555-0189	sidney0@adventure-works.com	0	9277 Country View Lane		Edmonds	Washington	98020	United States	
+14		Taylor	R	Maxwell		Production Supervisor - WC50	508-555-0165	taylor0@adventure-works.com	0	504 O St.		Edmonds	Washington	98020	United States	
+15		Jeffrey	L	Ford		Production Technician - WC10	984-555-0185	jeffrey0@adventure-works.com	0	5734 Ashford Court		Monroe	Washington	98272	United States	
+16		Jo	A	Brown		Production Supervisor - WC60	632-555-0129	jo0@adventure-works.com	0	9693 Mellowood Street		Duvall	Washington	98019	United States	
+17		Doris	M	Hartwig		Production Technician - WC10	328-555-0150	doris0@adventure-works.com	0	5553 Cash Avenue		Kenmore	Washington	98028	United States	
+18		John	T	Campbell		Production Supervisor - WC60	435-555-0113	john0@adventure-works.com	1	2639 Anchor Court		Seattle	Washington	98104	United States	
+19		Diane	R	Glimp		Production Technician - WC10	202-555-0151	diane0@adventure-works.com	2	9006 Woodside Way		Redmond	Washington	98052	United States	
+20		Steven	T	Selikoff		Production Technician - WC30	925-555-0114	steven0@adventure-works.com	2	181 Gaining Drive		Everett	Washington	98201	United States	
+21		Peter	J	Krebs		Production Control Manager	913-555-0196	peter0@adventure-works.com	0	3670 All Ways Drive		Bellevue	Washington	98004	United States	
+22		Stuart	V	Munson		Production Technician - WC45	413-555-0136	stuart0@adventure-works.com	2	6448 Castle Court		Bellevue	Washington	98004	United States	
+23		Greg	F	Alderson		Production Technician - WC45	332-555-0150	greg0@adventure-works.com	0	8684 Military East		Bellevue	Washington	98004	United States	
+24		David	N	Johnson		Production Technician - WC30	166-555-0162	david1@adventure-works.com	0	6697 Ridge Park Drive		Kenmore	Washington	98028	United States	
+25		Zheng	W	Mu		Production Supervisor - WC10	113-555-0173	zheng0@adventure-works.com	0	6578 Woodhaven Ln.		Seattle	Washington	98104	United States	
+26		Ivo	William	Salmre		Production Technician - WC20	115-555-0179	ivo0@adventure-works.com	0	3841 Silver Oaks Place		Monroe	Washington	98272	United States	
+27		Paul	B	Komosinski		Production Technician - WC40	147-555-0160	paul0@adventure-works.com	2	7270 Pepper Way		Bellevue	Washington	98004	United States	
+28		Ashvini	R	Sharma		Network Administrator	656-555-0119	ashvini0@adventure-works.com	1	6580 Poor Ridge Court		Issaquah	Washington	98027	United States	
+29		Kendall	C	Keil		Production Technician - WC50	138-555-0128	kendall0@adventure-works.com	2	7439 Laguna Niguel		Seattle	Washington	98104	United States	
+30		Paula	M	Barreto de Mattos		Human Resources Manager	523-555-0175	paula0@adventure-works.com	2	4311 Clay Rd		Bellevue	Washington	98004	United States	
+31		Alejandro	E	McGuel		Production Technician - WC40	668-555-0130	alejandro0@adventure-works.com	0	7127 Los Gatos Court		Seattle	Washington	98104	United States	
+32		Garrett	R	Young		Production Technician - WC30	609-555-0179	garrett0@adventure-works.com	2	2115 Passing		Snohomish	Washington	98296	United States	
+33		Jian Shuo		Wang		Production Technician - WC30	952-555-0178	jianshuo0@adventure-works.com	0	8310 Ridge Circle		Monroe	Washington	98272	United States	
+34		Susan	W	Eaton		Stocker	943-555-0196	susan0@adventure-works.com	2	2736 Scramble Rd		Renton	Washington	98055	United States	
+35		Vamsi	N	Kuppa		Shipping and Receiving Clerk	937-555-0137	vamsi0@adventure-works.com	0	9833 Mt. Dias Blv.		Bothell	Washington	98011	United States	
+36		Alice	O	Ciccu		Production Technician - WC50	333-555-0173	alice0@adventure-works.com	1	3280 Pheasant Circle		Snohomish	Washington	98296	United States	
+37		Simon	D	Rapier		Production Technician - WC60	963-555-0134	simon0@adventure-works.com	0	3421 Bouncing Road		Duvall	Washington	98019	United States	
+38		Jinghao	K	Liu		Production Supervisor - WC50	794-555-0159	jinghao0@adventure-works.com	0	9666 Northridge Ct.		Carnation	Washington	98014	United States	
+39		Michael	T	Hines		Production Technician - WC20	218-555-0126	michael0@adventure-works.com	0	1792 Belmont Rd.		Monroe	Washington	98272	United States	
+40		Yvonne	S	McKay		Production Technician - WC45	286-555-0189	yvonne0@adventure-works.com	0	1962 Cotton Ct.		Everett	Washington	98201	United States	
+41		Peng	J	Wu		Quality Assurance Supervisor	164-555-0164	peng0@adventure-works.com	2	250 Race Court		Bothell	Washington	98011	United States	
+42		Jean	E	Trenary		Information Services Manager	685-555-0120	jean0@adventure-works.com	2	2383 Pepper Drive		Redmond	Washington	98052	United States	
+43		Russell		Hunter		Production Technician - WC50	786-555-0144	russell0@adventure-works.com	1	7616 Honey Court		Seattle	Washington	98104	United States	
+44		A. Scott		Wright		Master Scheduler	992-555-0194	ascott0@adventure-works.com	0	9297 Kenston Dr.		Newport Hills	Washington	98006	United States	
+45		Fred	T	Northup		Production Technician - WC40	818-555-0192	fred0@adventure-works.com	0	2601 Cambridge Drive		Snohomish	Washington	98296	United States	
+46		Sariya	E	Harnpadoungsataya		Marketing Specialist	399-555-0176	sariya0@adventure-works.com	0	1185 Dallas Drive		Everett	Washington	98201	United States	
+47		Willis	T	Johnson		Recruiter	778-555-0141	willis0@adventure-works.com	0	5452 Corte Gilberto		Everett	Washington	98201	United States	
+48		Jun	T	Cao		Production Technician - WC50	299-555-0113	jun0@adventure-works.com	0	4909 Poco Lane		Redmond	Washington	98052	United States	
+49		Christian	E	Kleinerman		Maintenance Supervisor	846-555-0157	christian0@adventure-works.com	0	8036 Summit View Dr.		Gold Bar	Washington	98251	United States	
+50		Susan	A	Metters		Production Technician - WC30	639-555-0164	susan1@adventure-works.com	1	9104 Mt. Sequoia Ct.		Sammamish	Washington	98074	United States	
+51		Reuben	H	D'sa		Production Supervisor - WC40	191-555-0112	reuben0@adventure-works.com	2	1064 Slow Creek Road		Seattle	Washington	98104	United States	
+52		Kirk	J	Koenigsbauer		Production Technician - WC45	669-555-0150	kirk0@adventure-works.com	1	1220 Bradford Way		Seattle	Washington	98104	United States	
+53		David	J	Ortiz		Production Technician - WC60	712-555-0119	david2@adventure-works.com	0	931 Corte De Luna		Seattle	Washington	98104	United States	
+54		Tengiz	N	Kharatishvili		Control Specialist	910-555-0116	tengiz0@adventure-works.com	1	3333 Madhatter Circle		Issaquah	Washington	98027	United States	
+55		Hanying	P	Feng		Production Technician - WC20	319-555-0139	hanying0@adventure-works.com	0	7297 RisingView		Redmond	Washington	98052	United States	
+56		Kevin	H	Liu		Production Technician - WC40	714-555-0138	kevin1@adventure-works.com	2	7594 Alexander Pl.		Seattle	Washington	98104	United States	
+57		Annik	O	Stahl		Production Technician - WC60	499-555-0125	annik0@adventure-works.com	0	7842 Ygnacio Valley Road		Seattle	Washington	98104	United States	
+58		Suroor	R	Fatima		Production Technician - WC50	932-555-0161	suroor0@adventure-works.com	0	3281 Hillview Dr.		Edmonds	Washington	98020	United States	
+59		Deborah	E	Poe		Accounts Receivable Specialist	602-555-0194	deborah0@adventure-works.com	0	7640 First Ave.		Everett	Washington	98201	United States	
+60		Jim	H	Scardelis		Production Technician - WC50	679-555-0113	jim0@adventure-works.com	2	172 Turning Dr.		Edmonds	Washington	98020	United States	
+61		Carole	M	Poland		Production Technician - WC30	688-555-0192	carole0@adventure-works.com	2	8411 Mt. Orange Place		Edmonds	Washington	98020	United States	
+62		George	Z	Li		Production Technician - WC30	518-555-0199	george0@adventure-works.com	0	3074 Arbor Drive		Carnation	Washington	98014	United States	
+63		Gary	W	Yukish		Production Technician - WC40	901-555-0125	gary0@adventure-works.com	0	6057 Hill Street		Edmonds	Washington	98020	United States	
+64		Cristian	K	Petculescu		Production Supervisor - WC10	434-555-0133	cristian0@adventure-works.com	1	7166 Brock Lane		Seattle	Washington	98104	United States	
+65		Raymond	K	Sam		Production Technician - WC20	226-555-0197	raymond0@adventure-works.com	0	9784 Mt Etna Drive		Edmonds	Washington	98020	United States	
+66		Janaina	Barreiro Gambaro	Bueno		Application Specialist	623-555-0155	janaina0@adventure-works.com	0	5979 El Pueblo		Issaquah	Washington	98027	United States	
+67		Bob	N	Hohman		Production Technician - WC50	611-555-0116	bob0@adventure-works.com	0	6387 Scenic Avenue		Bothell	Washington	98011	United States	
+68		Shammi	G	Mohamed		Production Technician - WC40	793-555-0179	shammi0@adventure-works.com	0	332 Laguna Niguel		Bellevue	Washington	98004	United States	
+69		Linda	K	Moschell		Production Technician - WC50	612-555-0171	linda0@adventure-works.com	1	3284 S. Blank Avenue		Bellevue	Washington	98004	United States	
+70		Mindy	C	Martin		Benefits Specialist	522-555-0147	mindy0@adventure-works.com	0	9687 Shakespeare Drive		Newport Hills	Washington	98006	United States	
+71		Wendy	Beth	Kahn		Finance Manager	248-555-0134	wendy0@adventure-works.com	2	4525 Benedict Ct.		Sammamish	Washington	98074	United States	
+72		Kim	T	Ralls		Stocker	309-555-0129	kim0@adventure-works.com	2	1226 Shoe St.		Bothell	Washington	98011	United States	
+73		Sandra		Re tegui Alayo		Production Technician - WC30	896-555-0168	sandra0@adventure-works.com	0	1619 Stillman Court		Seattle	Washington	98104	United States	
+74		Kok-Ho	T	Loh		Production Supervisor - WC50	999-555-0155	kok-ho0@adventure-works.com	2	3708 Montana		Bellevue	Washington	98004	United States	
+75		Douglas	B	Hite		Production Technician - WC45	808-555-0172	douglas0@adventure-works.com	1	390 Ridgewood Ct.		Carnation	Washington	98014	United States	
+76		James	D	Kramer		Production Technician - WC60	119-555-0117	james0@adventure-works.com	2	4734 Sycamore Court		Monroe	Washington	98272	United States	
+77		Sean	P	Alexander		Quality Assurance Technician	420-555-0173	sean0@adventure-works.com	2	7985 Center Street		Renton	Washington	98055	United States	
+78		Nitin	S	Mirchandani		Production Technician - WC20	143-555-0173	nitin0@adventure-works.com	0	4096 San Remo		Sammamish	Washington	98074	United States	
+79		Diane	L	Margheim		Research and Development Engineer	815-555-0138	diane1@adventure-works.com	0	475 Santa Maria		Everett	Washington	98201	United States	
+80		Rebecca	A	Laszlo		Production Technician - WC60	314-555-0113	rebecca0@adventure-works.com	1	3197 Thornhill Place		Bellevue	Washington	98004	United States	
+81		Rajesh	M	Patel		Production Technician - WC40	373-555-0137	rajesh0@adventure-works.com	1	5423 Champion Rd.		Edmonds	Washington	98020	United States	
+82		Vidur	X	Luthra		Recruiter	153-555-0186	vidur0@adventure-works.com	0	3030 Blackburn Ct.		Newport Hills	Washington	98006	United States	
+83		John	P	Evans		Production Technician - WC50	172-555-0130	john1@adventure-works.com	1	136 Balboa Court		Seattle	Washington	98104	United States	
+84		Nancy	A	Anderson		Production Technician - WC60	970-555-0118	nancy0@adventure-works.com	1	7820 Bird Drive		Sammamish	Washington	98074	United States	
+85		Pilar	G	Ackerman		Shipping and Receiving Supervisor	577-555-0185	pilar0@adventure-works.com	0	5407 Cougar Way		Seattle	Washington	98104	United States	
+86		David	A	Yalovsky		Production Technician - WC30	373-555-0142	david3@adventure-works.com	1	5025 Holiday Hills		Seattle	Washington	98104	United States	
+87		David	P	Hamilton		Production Supervisor - WC40	986-555-0177	david4@adventure-works.com	1	4095 Cooper Dr.		Kenmore	Washington	98028	United States	
+88		Laura	C	Steele		Production Technician - WC45	777-555-0141	laura0@adventure-works.com	0	1825 Corte Del Prado		Duvall	Washington	98019	United States	
+89		Margie	W	Shoop		Production Technician - WC60	818-555-0128	margie0@adventure-works.com	2	2080 Sycamore Drive		Edmonds	Washington	98020	United States	
+90		Zainal	T	Arifin		Document Control Manager	204-555-0115	zainal0@adventure-works.com	1	342 San Simeon		Issaquah	Washington	98027	United States	
+91		Lorraine	O	Nay		Production Technician - WC40	845-555-0184	lorraine0@adventure-works.com	1	2059 Clay Rd		Edmonds	Washington	98020	United States	
+92		Fadi	K	Fakhouri		Production Technician - WC20	935-555-0116	fadi0@adventure-works.com	2	1285 Greenbrier Street		Snohomish	Washington	98296	United States	
+93		Ryan	L	Cornelsen		Production Technician - WC40	208-555-0114	ryan0@adventure-works.com	2	177 11th Ave		Sammamish	Washington	98074	United States	
+94		Candy	L	Spoon		Accounts Receivable Specialist	920-555-0177	candy0@adventure-works.com	0	310 Winter Lane		Index	Washington	98256	United States	
+95		Nuan		Yu		Production Technician - WC50	913-555-0184	nuan0@adventure-works.com	0	3454 Bel Air Drive		Bellevue	Washington	98004	United States	
+96		William	S	Vong		Scheduling Assistant	148-555-0145	william0@adventure-works.com	2	6774 Bonanza		Bellevue	Washington	98004	United States	
+97		Bjorn	M	Rettig		Production Technician - WC30	199-555-0117	bjorn0@adventure-works.com	1	5802 Ampersand Drive		Seattle	Washington	98104	United States	
+98		Scott	R	Gode		Production Technician - WC45	391-555-0138	scott0@adventure-works.com	0	7403 N. Broadway		Seattle	Washington	98104	United States	
+99		Michael	L	Rothkugel		Production Technician - WC40	454-555-0119	michael1@adventure-works.com	2	207 Berry Court		Edmonds	Washington	98020	United States	
+100		Lane	M	Sacksteder		Production Technician - WC20	200-555-0117	lane0@adventure-works.com	1	3029 Pastime Dr	# 2	Seattle	Washington	98104	United States	

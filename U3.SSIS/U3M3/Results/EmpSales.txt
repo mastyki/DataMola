@@ -1,0 +1,15 @@
+BusinessEntityID,FirstName,LastName,JobTitle,EmailAddress
+,Pamela,Ansman-Wolfe,,pamela0@adventure-works.com
+,Michael,Blythe,,michael9@adventure-works.com
+,David,Campbell,,david8@adventure-works.com
+,Jillian,Carson,,jillian0@adventure-works.com
+,Shu,Ito,,shu0@adventure-works.com
+,Tete,Mensa-Annan,,tete0@adventure-works.com
+,Linda,Mitchell,,linda3@adventure-works.com
+,Jae,Pak,,jae0@adventure-works.com
+,Tsvi,Reiter,,tsvi0@adventure-works.com
+,Jose,Saraiva,,jose1@adventure-works.com
+,Lynn,Tsoflias,,lynn0@adventure-works.com
+,Rachel,Valdez,,rachel0@adventure-works.com
+,Garrett,Vargas,,garrett1@adventure-works.com
+,Ranjit,Varkey Chudukatil,,ranjit0@adventure-works.com
